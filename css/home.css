@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home-container {
+    background-image: url('../assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.app-logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.user-guide-icon {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    object-fit: contain;
+    border-radius: 50px;
+}
+
+.app-title {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3bb371;
+    color: #e0feca;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.playlist-box {
+    background-color: #3bb371;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.playlist-box:hover {
+    transform: scale(1.05);
+}
+
+.box-image {
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.box-label {
+    color: #e0feca;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px 0;
+}

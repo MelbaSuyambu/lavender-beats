@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures background doesn't vanish when scrolling */
+}
+
+.playlist-container {
+    width: 100%;
+    min-height: 100vh; /* Ensures full page height even if content is less */
+    padding-bottom: 50px; /* Some breathing room at the bottom */
+}
+
+.app-logo {
+    display: block;
+    margin: 50px 50px 20px 50px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.app-title {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3bb371;
+    color: #e0feca;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.song-list {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.song-box {
+    background-color: #3bb371;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.song-box:hover {
+    transform: scale(1.03);
+}
+
+.song-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.song-name {
+    color: #e0feca;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+}

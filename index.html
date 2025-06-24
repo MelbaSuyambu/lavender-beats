@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Beats - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="home-container">
+        <!-- Logo (click to go to home page) -->
+        <a href="index.html">
+            <img src="assets/images/flower_logo.jpg" alt="Lavender Beats Logo" class="app-logo">
+        </a>
+
+        <!-- App Title -->
+        <div class="app-title">Lavender Beats</div>
+
+        <!-- User Guide Icon (click to play audio) -->
+        <audio id="userGuideAudio" src="assets/audio/user_guide.mp3"></audio>
+
+        <img src="assets/images/user_guide_icon.jpg" alt="User Guide" class="user-guide-icon" onclick="playUserGuide()">
+
+        <!-- Playlist Grid -->
+        <div class="playlist-grid">
+            <a href="happy.html" class="playlist-box">
+                <img src="assets/images/happy_flower.png" alt="Happy" class="box-image">
+                <div class="box-label">Happy</div>
+            </a>
+            <a href="dance.html" class="playlist-box">
+                <img src="assets/images/dance_flower.png" alt="Dance" class="box-image">
+                <div class="box-label">Dance</div>
+            </a>
+            <a href="gym.html" class="playlist-box">
+                <img src="assets/images/gym_flower.png" alt="Gym" class="box-image">
+                <div class="box-label">Gym</div>
+            </a>
+            <a href="library.html" class="playlist-box">
+                <img src="assets/images/library_flower.png" alt="Library" class="box-image">
+                <div class="box-label">Library</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Audio for User Guide -->
+    <audio id="userGuideAudio" src="assets/audio/user_guide.mp3"></audio>
+<button id="start-voice-control">Start Voice Control</button>
+<div id="listening-indicator">🎤 Listening...</div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

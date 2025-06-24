@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Playlist - Lavender Beats</title>
+    <link rel="stylesheet" href="css/gym.css">
+</head>
+<body>
+    <div class="playlist-container">
+        <!-- Logo (click to go to home page) -->
+        <a href="index.html">
+            <img src="assets/images/flower_logo.jpg" alt="Lavender Beats Logo" class="app-logo">
+        </a>
+
+        <!-- Playlist Title -->
+        <div class="app-title">Gym Playlist</div>
+
+        <!-- Song List -->
+        <div class="song-list">
+            <div class="song-box" onclick="togglePlay('song1')">
+                <img src="assets/images/gym_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 1</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song2')">
+                <img src="assets/images/gym_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 2</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song3')">
+                <img src="assets/images/gym_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 3</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song4')">
+                <img src="assets/images/gym_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 4</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="song1" src="assets/audio/gym_song1.mp3"></audio>
+    <audio id="song2" src="assets/audio/gym_song2.mp3"></audio>
+    <audio id="song3" src="assets/audio/gym_song3.mp3"></audio>
+    <audio id="song4" src="assets/audio/gym_song4.mp3"></audio>
+<button id="start-voice-control">Start Voice Control</button>
+<div id="listening-indicator">🎤 Listening...</div>
+
+
+    <script src="js/playlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Library - Lavender Beats</title>
+    <link rel="stylesheet" href="css/library.css">
+</head>
+<body>
+    <div class="playlist-container">
+        <!-- Logo (click to go to home page) -->
+        <a href="index.html">
+            <img src="assets/images/flower_logo.jpg" alt="Lavender Beats Logo" class="app-logo">
+        </a>
+
+        <!-- Playlist Title -->
+        <div class="app-title">Song Library</div>
+
+        <!-- Song List -->
+        <div class="song-list">
+            <div class="song-box" onclick="togglePlay('song1')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 1</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song2')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 2</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song3')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 3</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song4')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 4</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song5')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 5</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song6')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 6</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song7')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 7</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song8')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 8</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song9')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 9</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song10')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 10</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song11')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 11</div>
+            </div>
+            <div class="song-box" onclick="togglePlay('song12')">
+                <img src="assets/images/library_song_icon.png" alt="Song Icon" class="song-icon">
+                <div class="song-name">Song 12</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="song1" src="assets/audio/happy_song1.mp3"></audio>
+    <audio id="song2" src="assets/audio/happy_song2.mp3"></audio>
+    <audio id="song3" src="assets/audio/happy_song3.mp3"></audio>
+    <audio id="song4" src="assets/audio/happy_song4.mp3"></audio>
+    <audio id="song5" src="assets/audio/dance_song1.mp3"></audio>
+    <audio id="song6" src="assets/audio/dance_song2.mp3"></audio>
+    <audio id="song7" src="assets/audio/dance_song3.mp3"></audio>
+    <audio id="song8" src="assets/audio/dance_song4.mp3"></audio>
+    <audio id="song9" src="assets/audio/gym_song1.mp3"></audio>
+    <audio id="song10" src="assets/audio/gym_song2.mp3"></audio>
+    <audio id="song11" src="assets/audio/gym_song3.mp3"></audio>
+    <audio id="song12" src="assets/audio/gym_song4.mp3"></audio>
+<button id="start-voice-control">Start Voice Control</button>
+<div id="listening-indicator">🎤 Listening...</div>
+
+
+    <script src="js/playlist.js"></script>
+</body>
+</html>
