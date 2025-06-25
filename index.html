@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="home-container">
-        <!-- Logo (click to go to home page) -->
+        <!-- Logo -->
         <a href="index.html">
             <img src="assets/images/flower_logo.jpg" alt="Lavender Beats Logo" class="app-logo">
         </a>
@@ -16,9 +16,8 @@
         <!-- App Title -->
         <div class="app-title">Lavender Beats</div>
 
-        <!-- User Guide Icon (click to play audio) -->
+        <!-- User Guide Icon -->
         <audio id="userGuideAudio" src="assets/audio/user_guide.mp3"></audio>
-
         <img src="assets/images/user_guide_icon.jpg" alt="User Guide" class="user-guide-icon" onclick="playUserGuide()">
 
         <!-- Playlist Grid -->
@@ -40,14 +39,12 @@
                 <div class="box-label">Library</div>
             </a>
         </div>
-    </div>
 
-    <!-- Audio for User Guide -->
-    <audio id="userGuideAudio" src="assets/audio/user_guide.mp3"></audio>
-<button id="start-voice-control">Start Voice Control</button>
-<div id="listening-indicator">🎤 Listening...</div>
-
-
+        <!-- Text Command Input -->
+<div class="text-command">
+    <input type="text" id="voiceInput" placeholder="command here..." />
+    <button onclick="processCommand()">Go</button>
+</div>
     <script src="js/main.js"></script>
 </body>
 </html>

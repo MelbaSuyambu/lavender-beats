@@ -1,10 +1,6 @@
-var startButton = document.getElementById('start-voice-control');
-var listeningIndicator = document.getElementById('listening-indicator');
-
-listeningIndicator.style.display = 'none';
-
 let currentSong = null;
 
+// Click functionality
 function togglePlay(songId) {
     const song = document.getElementById(songId);
 
@@ -21,52 +17,35 @@ function togglePlay(songId) {
     }
 }
 
-var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-recognition.continuous = true;
-recognition.interimResults = false;
-recognition.lang = 'en-IN';
+// Process text input command
+function processCommand() {
+    var input = document.getElementById('voiceInput').value.trim().toLowerCase();
+    console.log('You typed:', input);
 
-startButton.onclick = function () {
-    recognition.start();
-    listeningIndicator.style.display = 'block';
-    console.log('Speech recognition started');
-};
-
-recognition.onresult = function (event) {
-    var transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
-    console.log('You said:', transcript);
-
-    if (transcript.includes('play song one')) {
-        playVoiceSong('song1');
-    } else if (transcript.includes('play song two')) {
-        playVoiceSong('song2');
-    } else if (transcript.includes('play song three')) {
-        playVoiceSong('song3');
-    } else if (transcript.includes('play song four')) {
-        playVoiceSong('song4');
-    } else if (transcript.includes('pause song one')) {
-        pauseVoiceSong('song1');
-    } else if (transcript.includes('pause song two')) {
-        pauseVoiceSong('song2');
-    } else if (transcript.includes('pause song three')) {
-        pauseVoiceSong('song3');
-    } else if (transcript.includes('pause song four')) {
-        pauseVoiceSong('song4');
-    } else if (transcript.includes('go to home')) {
+    if (input.includes('play song one')) {
+        playSong('song1');
+    } else if (input.includes('play song two')) {
+        playSong('song2');
+    } else if (input.includes('play song three')) {
+        playSong('song3');
+    } else if (input.includes('play song four')) {
+        playSong('song4');
+    } else if (input.includes('pause song one')) {
+        pauseSong('song1');
+    } else if (input.includes('pause song two')) {
+        pauseSong('song2');
+    } else if (input.includes('pause song three')) {
+        pauseSong('song3');
+    } else if (input.includes('pause song four')) {
+        pauseSong('song4');
+    } else if (input.includes('go to home')) {
         window.location.href = 'index.html';
+    } else {
+        alert('Command not recognized. Please try again.');
     }
-};
+}
 
-recognition.onerror = function (event) {
-    console.error('Speech recognition error:', event.error);
-};
-
-recognition.onend = function () {
-    console.log('Speech recognition stopped');
-    listeningIndicator.style.display = 'none';
-};
-
-function playVoiceSong(songId) {
+function playSong(songId) {
     const song = document.getElementById(songId);
 
     if (currentSong && currentSong !== song) {
@@ -78,7 +57,7 @@ function playVoiceSong(songId) {
     currentSong = song;
 }
 
-function pauseVoiceSong(songId) {
+function pauseSong(songId) {
     const song = document.getElementById(songId);
     song.pause();
 }

@@ -9,17 +9,21 @@ body, html {
     background-image: url('../assets/images/background.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+    padding-top: 150px; /* to push content below logo and title */
 }
 
 .app-logo {
     position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 80px;
-    height: 80px;
+    top: 30px;
+    left: 30px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     border-radius: 50px;
     cursor: pointer;
@@ -27,20 +31,16 @@ body, html {
 
 .user-guide-icon {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 80px;
-    height: 80px;
+    top: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
     object-fit: contain;
     border-radius: 50px;
 }
 
 .app-title {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: #3bb371;
     color: #e0feca;
     padding: 10px 20px;
@@ -49,6 +49,7 @@ body, html {
     font-size: 30px;
     text-align: center;
     white-space: nowrap;
+    margin-bottom: 40px;
 }
 
 .playlist-grid {
@@ -57,11 +58,7 @@ body, html {
     grid-gap: 20px;
     width: 80%;
     max-width: 600px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30%);
+    margin-bottom: 40px;
 }
 
 .playlist-box {
@@ -71,7 +68,7 @@ body, html {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
 }
 
 .playlist-box:hover {
@@ -90,4 +87,74 @@ body, html {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     padding: 10px 0;
+}
+
+.text-command {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.text-command input {
+    font-size: 24px;
+    padding: 15px;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #4a148c;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.text-command button {
+    font-size: 24px;
+    padding: 15px 40px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-command button:hover {
+    background-color: #6a1b9a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .app-logo, .user-guide-icon {
+        width: 60px;
+        height: 60px;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .app-title {
+        font-size: 24px;
+        padding: 8px 16px;
+        margin-bottom: 30px;
+    }
+
+    .playlist-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .box-label {
+        font-size: 18px;
+    }
+
+    .text-command input, .text-command button {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .text-command button {
+        padding: 12px 30px;
+    }
 }

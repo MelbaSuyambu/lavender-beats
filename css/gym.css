@@ -76,3 +76,68 @@ body, html {
     font-family: 'Courier New', Courier, monospace;
     font-size: 22px;
 }
+.text-command {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.text-command input {
+    font-size: 24px;
+    padding: 15px;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #4a148c; /* Dark purple border */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.text-command button {
+    font-size: 24px;
+    padding: 15px 40px;
+    background-color: #4a148c; /* Dark purple background */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text-command button:hover {
+    background-color: #6a1b9a; /* Slightly lighter purple on hover */
+}
+@media (max-width: 768px) {
+    .app-logo {
+        margin: 30px 30px 20px 30px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .app-title {
+        font-size: 24px;
+        padding: 8px 16px;
+        top: 30px;
+    }
+
+    .song-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    .song-name {
+        font-size: 18px;
+    }
+
+    .text-command input, .text-command button {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .text-command button {
+        padding: 12px 30px;
+    }
+}

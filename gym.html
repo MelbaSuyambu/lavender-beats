@@ -42,10 +42,10 @@
     <audio id="song2" src="assets/audio/gym_song2.mp3"></audio>
     <audio id="song3" src="assets/audio/gym_song3.mp3"></audio>
     <audio id="song4" src="assets/audio/gym_song4.mp3"></audio>
-<button id="start-voice-control">Start Voice Control</button>
-<div id="listening-indicator">🎤 Listening...</div>
-
-
+<div class="text-command">
+    <input type="text" id="voiceInput" placeholder="command here..." />
+    <button onclick="processCommand()">Go</button>
+</div>
     <script src="js/playlist.js"></script>
 </body>
 </html>
