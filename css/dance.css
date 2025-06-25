@@ -111,7 +111,7 @@ body, html {
 }
 @media (max-width: 768px) {
     .app-logo {
-        margin: 30px 30px 20px 30px;
+        margin: 30px 30px 20px 15px;
         width: 60px;
         height: 60px;
     }
