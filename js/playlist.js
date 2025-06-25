@@ -43,6 +43,9 @@ function processCommand() {
     } else {
         alert('Command not recognized. Please try again.');
     }
+
+    // Auto-clear the input box after processing
+    document.getElementById('voiceInput').value = '';
 }
 
 function playSong(songId) {
