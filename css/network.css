@@ -1,0 +1,27 @@
+/* network.css */
+.network-status {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    z-index: 9999;
+    display: none; /* Hidden by default */
+}
+
+.network-status.low {
+    background-color: #d32f2f; /* Red for low network */
+}
+
+.network-status.medium {
+    background-color: #fbc02d; /* Yellow for medium network */
+}
+
+.network-status.high {
+    background-color: #388e3c; /* Green for high network */
+}
